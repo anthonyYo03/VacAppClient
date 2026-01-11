@@ -1,0 +1,26 @@
+<h2 class="page-title text-center m-4">
+  Choose Your Perfect Ride for the Ultimate Vacation!
+</h2>
+
+<nav class="navbar navbar-expand-lg vehicle-navbar">
+  <div class="container d-flex justify-content-center">
+    <div class="option" routerLink="./plane">
+      <img
+        src="./assets/airplane-outline (1).svg"
+        alt="Plane Logo"
+        class="logos"
+      />
+      <span class="option-text">Plane</span>
+    </div>
+    <div class="option" routerLink="./car">
+      <img src="./assets/car-outline.svg" alt="Car Logo" class="logos" />
+      <span class="option-text">Car</span>
+    </div>
+    <div class="option" routerLink="./boat">
+      <img src="./assets/boat-outline.svg" alt="Boat Logo" class="logos" />
+      <span class="option-text">Boat</span>
+    </div>
+  </div>
+</nav>
+
+<router-outlet></router-outlet>

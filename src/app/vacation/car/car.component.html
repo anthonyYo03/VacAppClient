@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="row row-cols-3">
+    <div
+      class="card m-3"
+      style="width: 18rem"
+      *ngFor="let c of carData; let i = index"
+    >
+      <img
+        [src]="carImage[i]?.src"
+        [alt]="carImage[i]?.alt"
+        class="imgs-size"
+      />
+      <div class="card-body">
+        <h5 class="card-title">Brand : {{ c.brand }}</h5>
+        <p class="card-text">Model : {{ c.model }}</p>
+        <p class="card-text">Price Per Day : {{ c.pricePerDay | currency }}</p>
+        <p class="card-text">Fuel Type : {{ c.fuelType }}</p>
+        <a (click)="passDetails(c, i)" class="btn btn-primary">See Details </a>
+      </div>
+    </div>
+  </div>
+</div>

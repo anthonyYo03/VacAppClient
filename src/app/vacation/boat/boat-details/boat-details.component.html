@@ -1,0 +1,16 @@
+<div class="d-flex justify-content-center align-items-center vh-100">
+  <div class="bg-white text-center p-4 rounded" style="width: 35rem">
+    <img
+      [src]="imgSrc"
+      [alt]="imgAlt"
+      class="rounded-circle mb-3"
+      style="width: 200px; height: 200px"
+    />
+    <h2>{{ boatName }} {{ cabinType }}</h2>
+    <p><b>Price per day:</b> ${{ pricePerDay }}</p>
+    <div class="p-2">{{ details }}</div>
+    <button type="button" class="btn btn-secondary m-1" (click)="goBack()">
+      Go Back
+    </button>
+  </div>
+</div>

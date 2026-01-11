@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="row row-cols-3">
+    <div
+      class="card m-3"
+      style="width: 18rem"
+      *ngFor="let p of planeData; let i = index"
+    >
+      <img
+        [src]="planeImage[i]?.src"
+        class="imgs-size"
+        [alt]="planeImage[i]?.alt"
+      />
+      <div class="card-body">
+        <h5 class="card-title">Airline : {{ p.airline }}</h5>
+        <p class="card-text">Flight Number : {{ p.flightNumber }}</p>
+
+        <p class="card-text">Duration : {{ p.duration }}</p>
+        <p class="card-text">Stops : {{ p.stops }}</p>
+        <p class="card-text">Price : {{ p.price | currency }}</p>
+        <a class="btn btn-primary" (click)="passDetails(p, i)">See Details</a>
+      </div>
+    </div>
+  </div>
+</div>

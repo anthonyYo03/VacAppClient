@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="row row-cols-3">
+    <div
+      class="card m-3"
+      style="width: 18rem"
+      *ngFor="let b of boatData; let i = index"
+    >
+      <img
+        [src]="boatImage[i]?.src"
+        class="imgs-size"
+        [alt]="boatImage[i]?.alt"
+      />
+      <div class="card-body">
+        <h5 class="card-title">Name : {{ b.boatName }}</h5>
+        <p class="card-text">Capacity : {{ b.capacity }}</p>
+        <p class="card-text">Cabin Type : {{ b.cabinType }}</p>
+        <p class="card-text">Price Per Day : {{ b.pricePerDay | currency }}</p>
+        <a (click)="passDetails(b, i)" class="btn btn-primary">See Details </a>
+      </div>
+    </div>
+  </div>
+</div>

@@ -13,6 +13,6 @@ import { NavbarComponent } from './navbar/navbar.component';
 })
 export class AppComponent {
  
-  title = 'Emailapp';
+  title = 'Vacation App';
 
 }
